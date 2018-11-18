@@ -1,8 +1,9 @@
 class PeopleController < ApplicationController
+  include PeopleService
   before_action :set_person, only: [:show]
 
   def index
-    @people = Person.all
+    @people = PeopleService.get_people_list
     json_response(@people)
   end
 
