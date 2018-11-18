@@ -10,7 +10,7 @@ module PeopleService
       person.last_name = sl_person['last_name']
       person.display_name = sl_person['display_name']
       person.email_address = sl_person['email_address']
-      person.job_title = sl_person['job_title']
+      person.job_title = sl_person['title']
       people << person
     end
     return people
